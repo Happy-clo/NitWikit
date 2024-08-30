@@ -1,4 +1,4 @@
-name: Test
+name: Build and Deploy
 
 on: [pull_request, push]
 
@@ -18,6 +18,16 @@ jobs:
           node-version: 20
       - name: Install and Build
         run: pnpm install && pnpm run build
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          ARGS: "-avz --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
+
       - name: Get timestamp and short SHA
         id: timestamp
         run: |
@@ -28,12 +38,3 @@ jobs:
         with:
           name: Website-${{ steps.timestamp.outputs.short_sha }}
           path: build
-      - name: Deploy
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
-          ARGS: "-avz --delete"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.TARGET }}
