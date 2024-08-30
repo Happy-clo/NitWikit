@@ -23,8 +23,17 @@ jobs:
         run: |
           echo "::set-output name=timestamp::$(date +%s)"
           echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
-      - name: Deploy Artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload Artifact
+        uses: actions/upload-artifact@main
         with:
           name: Website-${{ steps.timestamp.outputs.short_sha }}
           path: build
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          ARGS: "-avz --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
