@@ -16,11 +16,13 @@
 
 # 📖 开始阅读
 
-文档正在编写ing...
+** 这是一个语言更加书面式，结构化的 Fork 版本，欢迎各位共同完善这份文档。 **
+
+文档正在编写 ing...
 
 https://yizhan.wiki/NitWikit/
 
-[企鹅群🐧611076407](https://qm.qq.com/q/lEnfzgzxjq)
+[企鹅群 🐧611076407](https://qm.qq.com/q/lEnfzgzxjq)
 
 ![:NitWikit](https://count.kjchmc.cn/get/@:NitWikit)
 
@@ -54,7 +56,7 @@ https://yizhan.wiki/NitWikit/
 5. 部署测试网站
    `pnpm serve`
 6. 一键构建&测试
-    `pnpm test`
+   `pnpm test`
 
 # ⬆️ 提交贡献
 
@@ -444,7 +446,6 @@ https://yizhan.wiki/NitWikit/
     </td>
   </tr>
 </table>
-
 
 # 📢 声明
 

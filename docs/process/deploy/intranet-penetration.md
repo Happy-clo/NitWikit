@@ -7,59 +7,54 @@ sidebar_position: 5
 
 **适用于？**
 
-没有公网的家里云
+适用于没有公网 IP 的家里云。
 
-**来几个？**
+## 常见内网穿透工具
 
-内网穿透一抓一大把,比如[樱花内网穿透](https://www.natfrp.com/)和[OpenFrp](https://www.openfrp.net/)
+内网穿透的工具有很多，比如：
 
-~~因为rz用户比较多,你甚至能用某人用不用樱花来定性判断这人有没有技术~~
+- [樱花内网穿透](https://www.natfrp.com/)
+- [OpenFrp](https://www.openfrp.net/)
 
-Linux自建frp参见[此页面](/advance/Linux/frp)
+由于内网穿透工具较多，用户常被称为“rz 用户”，因此使用某些工具可以作为判定一个人技术水平的参考。
 
+如果你想要在 Linux 上自建 frp，可以参考[此页面](/advance/Linux/frp)。
 
-## 可能的问题?
+## 可能的问题
 
-内网穿透后相当于玩家的连接传递到了你机器上的软件上,用这个软件访问本地的服务端(类似代理),服务端就会误认为是本地连接访问了服务器,就会出现以下问题：
+内网穿透后，玩家的连接会被传递到你机器上的内网穿透软件上，这个软件通过类似代理的方式访问本地的服务器。因此，服务端可能会误认为是本地连接，从而引发以下问题：
 
 ### 登录插件
 
 #### 玩家注册
 
-支持 IP 限制注册账号的登录插件(如 Authme 、CMI )会出问题
-
-如果内网穿透的话,他们的 IP 地址都是回环地址,所以他们不能注册账号了
+使用 IP 限制注册账号的插件（如 Authme、CMI）可能会出现问题。因为内网穿透后，所有玩家的 IP 地址会显示为回环地址（通常是 127.0.0.1），导致他们无法成功注册账号。
 
 #### 自动登录
 
-此功能依靠 IP 进行识别,如果内网穿透的话,普通玩家和 OP 玩家的 IP 都是回环地址
-
-就出现了玩家登录 OP 账号等 “绕过登录漏洞”
+依赖 IP 识别的自动登录功能也会受到影响，普通玩家和 OP 玩家都会被识别为同一 IP，存在“绕过登录漏洞”的风险，可能导致用户进行不当操作。
 
 ### 显示玩家 IP 归属地
 
-一些可以显示玩家 IP 归属地的插件会失效
+某些能够显示玩家 IP 归属地的插件在内网穿透后将失效，因为所有玩家的 IP 地址均为回环地址，不能准确显示。
 
-因为他们的 IP 都是回环地址
+### ban-ip ban 掉所有人
 
-### ban-ip ban掉所有人
-
-因为你们的地址都是回环地址
-
-所以你 ban-ip 会 ban 掉所有人,包括你自己......
+因为内网穿透使所有玩家的地址相同，如果使用 ban-ip 功能，将导致所有玩家（包括你自己）都被禁用。
 
 ### 反假人插件
 
-这会导致反假人插件几乎不能使用,因为无论是封禁 IP 还是 IP 白名单都会因为所有玩家 IP 相同而失效。
+无论是通过 IP 封禁还是白名单，反假人插件在内网穿透后几乎无法正常使用，因为所有玩家的 IP 地址相同，导致插件无法识别有效的 IP。
 
-### 解决以上无法显示IP地址的办法：proxy protocol
+### 解决 IP 地址显示问题的方法：Proxy Protocol
 
-正是因为frp在转发玩家请求时重写了请求头部,导致了以上情况的发生。 frp 虽然不能不重写这个请求头部,但是他可以通过一种方式还原请求头部,让服务器正常显示出连接 IP 。Proxy Protocol 是由 HAProxy 开发者 Willy 提出的一种反向代理协议,可以参考 [HAProxy 文档](http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt) 获取更多信息。frp 内置的 proxy protocol 要求被其穿透的服务器也支持 proxy protocol ,否则会造成对应的服务无法使用,所以并不是随便拿一个服务就能用 proxy protocol 。 frp 启用 proxy protocol 的方式参考 [Linux自建frp](/advance/Linux/frp)。
+frp 在转发玩家请求时重写请求头，会导致上述问题。虽然 frp 无法避免重写这个请求头，但可以通过 Proxy Protocol 恢复请求头，使服务器正常显示连接的 IP 地址。Proxy Protocol 是由 HAProxy 开发者 Willy 提出的反向代理协议，可以参考 [HAProxy 文档](http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt) 获取更多信息。需要注意的是，frp 的 Proxy Protocol 功能要求被其穿透的服务器也支持该协议，否则相关服务无法正常使用。
 
-对于mc服务器来说,支持 proxy protocol 的软件有：
-- bungeecord 系
-- paper 分支(1.18.2)(仅支持v2)
+对于 Minecraft 服务器，支持 Proxy Protocol 的软件包括：
+
+- BungeeCord 系列
+- Paper 分支（1.18.2，仅支持 v2）
 - [Geyser](../../../Java/process/mobile-player/Geyser/introduction/FAQ#frp搭建内网穿透想显示真实ip怎么办)
-- Spigot端插件 [HAProxyDetector](https://github.com/andylizi/haproxy-detector)
+- Spigot 的插件 [HAProxyDetector](https://github.com/andylizi/haproxy-detector)
 
-等。BDS 服务器目前不支持此协议。
+目前 BDS 服务器不支持此协议。

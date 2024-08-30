@@ -1,7 +1,6 @@
 name: Test
 
-on:
-  [pull_request,push]
+on: [pull_request, push]
 
 jobs:
   deploy:
@@ -19,3 +18,13 @@ jobs:
           node-version: 20
       - name: Install and Build
         run: pnpm install && pnpm run build
+      - name: Get timestamp and short SHA
+        id: timestamp
+        run: |
+          echo "::set-output name=timestamp::$(date +%s)"
+          echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
+      - name: Deploy Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Website-${{ steps.timestamp.outputs.short_sha }}
+          path: build
