@@ -1,0 +1,45 @@
+name: Wiki Deploy
+
+# 触发条件
+on: 
+  push:
+    branches: [ 'main' ]
+    paths:
+      - 'docs/**'
+      - 'docs-java/**'
+      - 'docs-bedrock/**'
+      - 'package.json'
+
+# 设置权限
+permissions:
+  contents: write
+
+
+# 环境变量
+env:
+  BASE_URL: NitWikit
+
+# 任务
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: "setup pnpm"
+        uses: "pnpm/action-setup@v4"
+      - name: "setup node"
+        uses: "actions/setup-node@v4"
+        with:
+          node-version: 20
+      # 安装 Npm 并构建
+      - name: Install
+        run: pnpm install
+      - name: Build
+        run: pnpm run build
+      # 部署
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build

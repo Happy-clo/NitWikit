@@ -1,0 +1,30 @@
+name: Test
+
+on: [pull_request, push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: "setup pnpm"
+        uses: "pnpm/action-setup@v4"
+      - name: "setup node"
+
+        uses: "actions/setup-node@v4"
+        with:
+          node-version: 20
+      - name: Install and Build
+        run: pnpm install && pnpm run build
+      - name: Get timestamp and short SHA
+        id: timestamp
+        run: |
+          echo "::set-output name=timestamp::$(date +%s)"
+          echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
+      - name: Deploy Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Website-${{ steps.timestamp.outputs.short_sha }}
+          path: build
