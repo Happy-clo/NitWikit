@@ -464,6 +464,8 @@ https://yizhan.wiki/NitWikit/
   - 盈利
 - 你可以将本作品在不经授权的情况下用于：
   - 带有出处的引用
+> [!CAUTION]  
+> This branch is only for personal development, study and research. Please do not use any attachments directly. The author is not responsible for any problems with the source attachments.
 # Statement
 
 > [!CAUTION]  
