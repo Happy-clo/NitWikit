@@ -251,12 +251,21 @@ https://yizhan.wiki/NitWikit/
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Happy-clo">
+                    <img src="https://avatars.githubusercontent.com/u/92633092?v=4" width="50;" alt="Happy-clo"/>
+                    <br />
+                    <sub><b>Happy</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/HaHaWTH">
                     <img src="https://avatars.githubusercontent.com/u/102713261?v=4" width="50;" alt="HaHaWTH"/>
                     <br />
                     <sub><b>Kobe ⑧</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/MySoulcutting">
                     <img src="https://avatars.githubusercontent.com/u/72398605?v=4" width="50;" alt="MySoulcutting"/>
@@ -264,8 +273,6 @@ https://yizhan.wiki/NitWikit/
                     <sub><b>White_Souls</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/zzzyyylllty">
                     <img src="https://avatars.githubusercontent.com/u/167876309?v=4" width="50;" alt="zzzyyylllty"/>
@@ -274,24 +281,17 @@ https://yizhan.wiki/NitWikit/
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Happy-clo">
-                    <img src="https://avatars.githubusercontent.com/u/92633092?v=4" width="50;" alt="Happy-clo"/>
+                <a href="https://github.com/TheFloodDragon">
+                    <img src="https://avatars.githubusercontent.com/u/75253383?v=4" width="50;" alt="TheFloodDragon"/>
                     <br />
-                    <sub><b>Happy</b></sub>
+                    <sub><b>蛟龙</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/HanSiqi2008">
-                    <img src="https://avatars.githubusercontent.com/u/136245260?v=4" width="50;" alt="HanSiqi2008"/>
+                <a href="https://github.com/Coquettishpig">
+                    <img src="https://avatars.githubusercontent.com/u/107100449?v=4" width="50;" alt="Coquettishpig"/>
                     <br />
-                    <sub><b>HanSiqi2008</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/MoLiyi-WD">
-                    <img src="https://avatars.githubusercontent.com/u/166040564?v=4" width="50;" alt="MoLiyi-WD"/>
-                    <br />
-                    <sub><b>MoLiyi-WD</b></sub>
+                    <sub><b>Coquettishpig</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -304,17 +304,10 @@ https://yizhan.wiki/NitWikit/
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/Coquettishpig">
-                    <img src="https://avatars.githubusercontent.com/u/107100449?v=4" width="50;" alt="Coquettishpig"/>
+                <a href="https://github.com/MoLiyi-WD">
+                    <img src="https://avatars.githubusercontent.com/u/166040564?v=4" width="50;" alt="MoLiyi-WD"/>
                     <br />
-                    <sub><b>Coquettishpig</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/TheFloodDragon">
-                    <img src="https://avatars.githubusercontent.com/u/75253383?v=4" width="50;" alt="TheFloodDragon"/>
-                    <br />
-                    <sub><b>蛟龙</b></sub>
+                    <sub><b>MoLiyi-WD</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -338,8 +331,6 @@ https://yizhan.wiki/NitWikit/
                     <sub><b>MrVirgil</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/LittleChest">
                     <img src="https://avatars.githubusercontent.com/u/81231195?v=4" width="50;" alt="LittleChest"/>
@@ -347,6 +338,8 @@ https://yizhan.wiki/NitWikit/
                     <sub><b>LittleChest</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/MF-Dust">
                     <img src="https://avatars.githubusercontent.com/u/128943330?v=4" width="50;" alt="MF-Dust"/>
@@ -375,8 +368,6 @@ https://yizhan.wiki/NitWikit/
                     <sub><b>TalentsRC</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/YuanYuanOwO">
                     <img src="https://avatars.githubusercontent.com/u/81153017?v=4" width="50;" alt="YuanYuanOwO"/>
@@ -384,6 +375,8 @@ https://yizhan.wiki/NitWikit/
                     <sub><b>YuanYuanOwO</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/ZoruaFox">
                     <img src="https://avatars.githubusercontent.com/u/96456728?v=4" width="50;" alt="ZoruaFox"/>
@@ -412,8 +405,6 @@ https://yizhan.wiki/NitWikit/
                     <sub><b> 星凌 </b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/MSCMDD">
                     <img src="https://avatars.githubusercontent.com/u/128666602?v=4" width="50;" alt="MSCMDD"/>
