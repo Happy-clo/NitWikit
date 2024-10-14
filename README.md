@@ -251,12 +251,21 @@ https://yizhan.wiki/NitWikit/
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Happy-clo">
+                    <img src="https://avatars.githubusercontent.com/u/92633092?v=4" width="50;" alt="Happy-clo"/>
+                    <br />
+                    <sub><b>Happy</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/HaHaWTH">
                     <img src="https://avatars.githubusercontent.com/u/102713261?v=4" width="50;" alt="HaHaWTH"/>
                     <br />
                     <sub><b>Kobe ⑧</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/MySoulcutting">
                     <img src="https://avatars.githubusercontent.com/u/72398605?v=4" width="50;" alt="MySoulcutting"/>
@@ -264,20 +273,11 @@ https://yizhan.wiki/NitWikit/
                     <sub><b>White_Souls</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/zzzyyylllty">
                     <img src="https://avatars.githubusercontent.com/u/167876309?v=4" width="50;" alt="zzzyyylllty"/>
                     <br />
                     <sub><b>zzzyyylllty</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Happy-clo">
-                    <img src="https://avatars.githubusercontent.com/u/92633092?v=4" width="50;" alt="Happy-clo"/>
-                    <br />
-                    <sub><b>Happy</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -332,8 +332,8 @@ https://yizhan.wiki/NitWikit/
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Virgil692">
-                    <img src="https://avatars.githubusercontent.com/u/83110631?v=4" width="50;" alt="Virgil692"/>
+                <a href="https://github.com/virgil698">
+                    <img src="https://avatars.githubusercontent.com/u/83110631?v=4" width="50;" alt="virgil698"/>
                     <br />
                     <sub><b>MrVirgil</b></sub>
                 </a>
